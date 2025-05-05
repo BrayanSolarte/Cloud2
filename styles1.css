@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f4fa; /* Fondo claro lila */
+}
+
+header {
+    background-color: #3f3d56; /* Azul oscuro/morado elegante */
+    color: #fdfdfd;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#superior {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+}
+
+#icono1 {
+    max-width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar ul li a {
+    display: block;
+    color: #fdfdfd;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #e0e0f8;
+    transform: scale(1.1);
+    border-radius: 4px;
+    color: #2c2c2c;
+}
+
+.navbar ul li a.active {
+    background-color: #00cfc8; /* Verde agua moderno */
+    border-radius: 4px;
+}
+
+.dropbtn {
+    background-color: #3f3d56;
+    color: #fdfdfd;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropup {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+}
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    background-color: #3f3d56;
+    min-width: 160px;
+}
+
+.dropup-content a {
+    color: #eaeaea;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropup-content a:hover {
+    background-color: #dcd7f8;
+    color: #222;
+}
+
+.dropup:hover .dropup-content {
+    display: block;
+}
+
+.dropup:hover .dropbtn {
+    background-color: #5a4dbc;
+}
+
+/* Estilos de la galería y la misión */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f5f4fa;
+}
+
+.image-gallery {
+    padding-top: 5%;
+    width: 45%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(63, 61, 86, 0.3);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.navigation label {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #00cfc8;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #00cfc8;
+}
+
+.mission-text {
+    width: 45%;
+    padding: 10%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(63, 61, 86, 0.1);
+    border-radius: 10px;
+}
+
+.mission-text h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #5a4dbc;
+}
+
+.mission-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
